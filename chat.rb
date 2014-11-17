@@ -24,14 +24,27 @@ end
 
 #/************************************/
 
+get '/chat' do  
+  erb :chat  
+end
 
 
 #/************************************/
+
 
 post '/' do
   session[:name] = params[:username]
   erb :index
 end
+
+#/************************************/
+
+get '/logout' do  
+  user.delete(session[:name])
+  session.clear
+  redirect '/'  
+end
+
 
 #/************************************/
 
