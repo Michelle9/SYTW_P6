@@ -509,8 +509,52 @@ to {
 }
 
 
+/*==========9. CHAT ==============*/
 
-/*==========9. CUSTOM MEDIA QUERIES==============*/
+.chateando {
+  
+  width: 600px;
+  margin-top: 100px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:gray;
+  color: white;
+  
+}
+
+.usuarios {
+  
+  width: 400px;
+  margin-top: 100px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color:gray;
+  color: white;
+  
+}
+
+.bye{
+ 
+  margin-top:20px;
+  margin-bottom:20px;
+  
+}
+
+.text {
+ margin-top:50px; 
+}
+
+#chat {
+  margin-bottom: 30px;
+}
+
+
+
+/*==========10. CUSTOM MEDIA QUERIES==============*/
 
 
 /*MEDIA QUERIES*/
