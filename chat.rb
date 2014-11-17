@@ -5,13 +5,20 @@ require 'sinatra/reloader' if development?
 
 chat = ['welcome..']
 
-get('/') { erb :index }
+get('/') { erb :login }
+
+
+post '/' do
+  session[:name] = params[:username]
+  erb :index
+end
 
 get '/send' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
-  chat << "#{request.ip} : #{params['text']}"
+  chat << "#{session[:name]} : #{params['text']}"
   nil
 end
+
 
 get '/update' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
