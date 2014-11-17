@@ -33,8 +33,17 @@ end
 
 
 post '/' do
-  session[:name] = params[:username]
-  erb :index
+  if (user.include?(params[:username]))
+	redirect '/'
+  else
+	name = params[:username]
+	session[:name] = name
+	user << name
+	puts user
+	erb :chat
+  end
+  #session[:name] = params[:username]
+  #erb :index
 end
 
 #/************************************/
