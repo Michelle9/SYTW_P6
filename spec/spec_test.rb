@@ -14,8 +14,10 @@ end
 describe 'login page' do
    it 'lets the user login' do
       visit 'http://localhost:4567'
-      fill_in 'name', :with => 'Hikoreko'
-      click_on 'submit'
-      page.should have_content('welcome')
+      within("#username") do
+        fill_in 'name', :with => 'Hikoreko'
+      end
+      click_button 'Submit'
+      page.should have_content('welcome..')
    end
 end
