@@ -33,4 +33,13 @@ describe 'chat page' do
    end
 end
 
+describe 'chat page' do
+   it 'have a chat with the chat' do
+      visit 'http://localhost:4567/chat'
+      page.fill_in '#text', :with => 'Hello!!'
+      click_on('Enviar')
+      expect(page).to have_content("Hello!!")
+   end
+end
+
 
