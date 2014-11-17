@@ -3,14 +3,39 @@
     <style>
       #text{width:100%; font-size: 15px; padding: 5px; display: block;}
     </style>
+    <link href="css/bootstrap.css" rel="stylesheet">	 
+	<link href="css/main.css" rel="stylesheet">
+	
   </head>
+  
   <body>
-    <input id="text" placeholder="Write then press Enter." autofocus />
-    <div id="chat"></div>
-
+  <div class="row">
+	<div class="col-md-8">
+	
+	  <div class="chateando borde">	  
+		<div id="chat"></div>
+		<input id="text" placeholder="Write then press Enter." autofocus /> 
+		<a class="btn btn-small btn-info bye" href="/logout">Logout</a>
+	  </div>
+	
+	</div>
+	<div class="col-md-4">
+	
+	<div class="usuarios borde">	
+		<p>  Usuarios Conectados </p> <br>
+		<div id="user"></div>
+		
+	  </div>
+	
+	</div>
+  </div>
+				
+				
+	
+    
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src= "/js/chat.js"></script>
-    
-    <a class="btn btn-large btn-info" href="/logout">Logout</a>
+    <script src= "/js/user.js"></script>
   </body>
+  
 </html>
