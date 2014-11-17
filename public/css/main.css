@@ -511,10 +511,25 @@ to {
 
 /*==========9. CHAT ==============*/
 
+.espacio {
+  margin-top:30px;
+  height:100px;
+  width:800px;
+  padding-top:10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 39%, rgba(216,225,231,1) 73%, rgba(216,225,231,1) 87%, rgba(224,239,249,1) 100%);
+  color: black;
+  text-align :center;
+  font-size: 60px;
+}
+
 .chateando {
   
   width: 600px;
-  margin-top: 100px;
+  margin-top:50px;
   padding-top:10px;
   padding-right: 10px;
   padding-left: 30px;
@@ -527,8 +542,13 @@ to {
 
 .usuarios {
   
+<<<<<<< HEAD
   width: 350px;
   margin-top: 100px;
+=======
+  width: 400px;
+  margin-top:50px;
+>>>>>>> chat
   padding-right: 10px;
   padding-left: 10px;
   margin-right: auto;
@@ -556,6 +576,8 @@ to {
 
 .borde{
  border-radius:20px; 
+ border:solid;
+ border-color:#5882FA;
   
 }
 
