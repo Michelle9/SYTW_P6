@@ -18,6 +18,7 @@ describe 'login page' do
         fill_in('name', :with => 'Hikoreko')
       end
       click_on('Sing In')
+      visit 'http://localhost:4567/chat'
       expect(page).to have_content("Hikoreko")
       #page.should have_content('welcome..')
    end
