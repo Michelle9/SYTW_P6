@@ -7,6 +7,7 @@ $('#text').keypress(
   }
 );
 
+
 (function() {
   var last = 0;
   setInterval(
