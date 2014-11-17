@@ -7,6 +7,13 @@ $('#text').keypress(
   }
 );
 
+$('#enviar').click(
+   function(){
+	  $.get('/send',{text:$('#text').val()});
+	  $('#text').val('');
+   }
+);
+
 
 (function() {
   var last = 0;
