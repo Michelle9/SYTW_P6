@@ -17,7 +17,8 @@ describe 'login page' do
       within("#username") do
         fill_in 'name', :with => 'Hikoreko'
       end
-      click_button 'Submit'
-      page.should have_content('welcome..')
+      click_button 'submit'
+      expect(page).to have_content("Chat")
+      #page.should have_content('welcome..')
    end
 end
