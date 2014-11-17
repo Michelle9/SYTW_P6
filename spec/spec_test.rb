@@ -18,7 +18,19 @@ describe 'login page' do
         fill_in('name', :with => 'Hikoreko')
       end
       click_on('Sing In')
-      find('#chat').visible?
+      expect(page).to have_content("Hikoreko")
       #page.should have_content('welcome..')
    end
 end
+
+describe 'chat page' do
+   it 'load chat fine' do
+      visit 'http://localhost:4567/chat'
+      expect(page).to have_content("welcome..")
+      expect(page).to have_content("Logout")
+      expect(page).to have_content("Enviar")
+      expect(page).to have_content("Usuarios Conectados")
+   end
+end
+
+
