@@ -15,10 +15,10 @@ describe 'login page' do
    it 'lets the user login' do
       visit 'http://localhost:4567'
       within("#username") do
-        fill_in 'name', :with => 'Hikoreko'
+        fill_in('name', :with => 'Hikoreko')
       end
-      click_button 'submit'
-      expect(page).to have_content("Chat")
+      click_on('Sing In')
+      find('#chat').visible?
       #page.should have_content('welcome..')
    end
 end
