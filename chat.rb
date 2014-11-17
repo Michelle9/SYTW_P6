@@ -3,15 +3,37 @@ require 'sinatra/reloader' if development?
 #set :port, 3000
 #set :environment, :production
 
+enable :sessions
+set :session_secret, '*&(^#234a)'
+
 chat = ['welcome..']
 
-get('/') { erb :login }
+user = Array.new()
 
+#/************************************/
+
+get '/' do
+
+  if !session[:name]
+	erb :login
+  else
+	erb :chat
+  end  
+end
+
+
+#/************************************/
+
+
+
+#/************************************/
 
 post '/' do
   session[:name] = params[:username]
   erb :index
 end
+
+#/************************************/
 
 get '/send' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
@@ -19,6 +41,8 @@ get '/send' do
   nil
 end
 
+
+#/************************************/
 
 get '/update' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
@@ -32,4 +56,6 @@ get '/update' do
       <span data-last="<%= @last %>"></span>
   HTML
 end
+
+#/************************************/
 
