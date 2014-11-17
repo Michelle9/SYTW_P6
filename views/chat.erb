@@ -14,7 +14,16 @@
 	
 	  <div class="chateando borde">	  
 		<div id="chat"></div>
-		<input id="text" placeholder="Write then press Enter." autofocus /> 
+		<form class="form-horizontal" role="form">
+		  <div class="form-group">
+			<div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
+				<input id="text" placeholder="Write then press Enter." autofocus />
+			</div>
+			<div class="col-md-5 col-sm-4">
+				<button type="submit" id="enviar" class="btn btn-success btn-small">Enviar</button>
+			</div>
+		</div>
+		</form>
 		<a class="btn btn-small btn-info bye" href="/logout">Logout</a>
 	  </div>
 	
@@ -39,3 +48,4 @@
   </body>
   
 </html>
+
