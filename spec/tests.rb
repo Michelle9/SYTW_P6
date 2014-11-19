@@ -57,5 +57,16 @@ describe "Testing Chat App" do
        @browser.manage.timeouts.implicit_wait = 2
        item = @browser.find_element(:id, "chat").text
        assert_equal("Hello World!", item)
+       @browser.find_element(:id,"lgout").click
+    end
+    
+    it "5. Should logout user" do
+       @browser.find_element(:id, "username").send_keys("Evelpia")
+       @browser.manage.timeouts.implicit_wait = 1
+       @browser.find_element(:id,"SignIn").click
+       @browser.get(@site2)
+       @browser.manage.timeouts.implicit_wait = 5
+       @browser.find_element(:id,"lgout").click
+       assert_equal(true, @browser.find_element(:id,"SignIn").displayed?)
     end
  end
