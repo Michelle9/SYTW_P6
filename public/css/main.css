@@ -547,6 +547,7 @@ to {
   width: 350px;
   height: 400px;
   margin-top:50px;
+  padding-top:5px;
   padding-right: 10px;
   padding-left: 10px;
   margin-right: auto;
@@ -574,7 +575,7 @@ to {
 }
 
 .borde{
- border-radius:20px; 
+ border-radius:5px; 
  border:solid;
  border-color:#5882FA;
   

@@ -50,7 +50,7 @@ end
 
 #/************************************/
 
-get '/logout' do  
+get '/logout' do 
   user.delete(session[:name])
   session.clear
   redirect '/'  
