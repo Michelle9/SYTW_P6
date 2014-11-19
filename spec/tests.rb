@@ -18,6 +18,7 @@ describe "Testing Chat App" do
 	before :all do
 	   @browser = Selenium::WebDriver.for :firefox
 	   @site = 'http://desolate-shelf-1169.herokuapp.com/'
+	   @site2 = 'http://desolate-shelf-1169.herokuapp.com/chat'
 	   @browser.get(@site)
 	   @browser.manage.timeouts.implicit_wait = 5
 	end
@@ -37,15 +38,19 @@ describe "Testing Chat App" do
     
     it "3. Should login with a nick" do
        @browser.find_element(:id, "username").send_keys("Evelpia")
-       @browser.manage.timeouts.implicit_wait = 3
+       @browser.manage.timeouts.implicit_wait = 1
        @browser.find_element(:id,"SignIn").click
-       @browser.manage.timeouts.implicit_wait = 10
-       assert_equal(true, @browser.find_element(:id,"enviar").display?)
+       @browser.get(@site2)
+       @browser.manage.timeouts.implicit_wait = 5
+       assert_equal(true, @browser.find_element(:id,"enviar").displayed?)
     end
     
-    #it "4. Should post a message" do
-    #   fill_in 'text', :with => 'Hello!!'
-    #   click_on('Enviar')
-    #   expect(page).to have_content("Hello!!")
-    #end
+    it "4. Should post a message" do
+       @browser.find_element(:id, "username").send_keys("Evelpia")
+       @browser.manage.timeouts.implicit_wait = 1
+       @browser.find_element(:id,"SignIn").click
+       @browser.get(@site2)
+       @browser.manage.timeouts.implicit_wait = 5
+       assert_equal(true, @browser.find_element(:id,"enviar").displayed?)
+    end
  end
