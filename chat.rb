@@ -9,6 +9,8 @@ set :session_secret, '*&(^#234a)'
 chat = ['welcome..']
 
 user = Array.new()
+t = Time.now
+
 
 #/************************************/
 
@@ -59,7 +61,7 @@ end
 
 get '/send' do
   return [404, {}, "Not an ajax request"] unless request.xhr?
-  chat << "#{session[:name]} : #{params['text']}"
+  chat << "#{session[:name]} [#{t.strftime("%d/%m/%Y %H:%M:%S")}] : #{params['text']}"
   nil
 end
 
