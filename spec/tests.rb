@@ -39,7 +39,7 @@ describe "Testing Chat App" do
        @browser.find_element(:id, "username").send_keys("Evelpia")
        @browser.manage.timeouts.implicit_wait = 3
        @browser.find_element(:id,"SignIn").click
-       @browser.manage.timeouts.implicit_wait = 5
+       @browser.manage.timeouts.implicit_wait = 10
        assert_equal(true, @browser.find_element(:id,"enviar").display?)
     end
     
