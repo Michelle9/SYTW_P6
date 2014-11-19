@@ -43,6 +43,7 @@ describe "Testing Chat App" do
        @browser.get(@site2)
        @browser.manage.timeouts.implicit_wait = 5
        assert_equal(true, @browser.find_element(:id,"enviar").displayed?)
+       @browser.find_element(:id,"lgout").click
     end
     
     it "4. Should post a message" do
@@ -51,6 +52,10 @@ describe "Testing Chat App" do
        @browser.find_element(:id,"SignIn").click
        @browser.get(@site2)
        @browser.manage.timeouts.implicit_wait = 5
-       assert_equal(true, @browser.find_element(:id,"enviar").displayed?)
+       @browser.find_element(:id, "text").send_keys("Hello World!")
+       @browser.find_element(:id, "enviar").click
+       @browser.manage.timeouts.implicit_wait = 2
+       item = @browser.find_element(:id, "chat").text
+       assert_equal("Hello World!", item)
     end
  end
