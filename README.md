@@ -32,7 +32,7 @@ Estos enlaces pueden ser de ayuda:
 
 ### Heroku: [ACCEDER](https://desolate-shelf-1169.herokuapp.com/)
 ### Coveralls: [ACCEDER]()
-### Travis: [ACCEDER]()
+### Travis: [ACCEDER](https://travis-ci.org/Michelle9/SYTW_P6)
 
 -------------------------------------
 

@@ -1,7 +1,13 @@
+task :default => :server
+
 desc "Run Server"
   task :server do
 	sh "rackup"
   end
-
-task :default => :server
+  
+  
+desc "Test" 
+  task :test do
+	sh "ruby spec/spec_test.rb"
+  end
 
