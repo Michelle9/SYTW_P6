@@ -14,9 +14,10 @@ end
 describe 'login page' do
    it 'lets the user login' do
       visit 'http://desolate-shelf-1169.herokuapp.com/'
-      within("#username") do
-        fill_in('name', :with => 'Hikoreko')
-      end
+      fill_in 'username', :with => 'Hikoreko'
+      #within("#username") do
+      #  fill_in('name', :with => 'Hikoreko')
+      #end
       click_on('Sing In')
       visit 'http://desolate-shelf-1169.herokuapp.com/chat'
       expect(page).to have_content("Hikoreko")
