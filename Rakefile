@@ -13,6 +13,6 @@ end
   
 desc "Test" 
   task :test do
-	sh "ruby spec/spec_test.rb"
+	sh "ruby spec/test.rb"
   end
 
