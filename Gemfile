@@ -4,6 +4,10 @@ gem 'thin'
 gem 'sinatra'
 
 group :development, :test do
+  gem 'rack-test'
+  gem 'rake'
+  gem 'minitest'
+  gem 'test-unit'
   gem 'rspec'
   gem 'sinatra-contrib'
   gem 'capybara'
