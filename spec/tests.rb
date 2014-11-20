@@ -5,8 +5,12 @@ require 'rack/test'
 require 'selenium-webdriver'
 require 'rubygems'
 require 'rspec'
+<<<<<<< HEAD
 require 'coveralls'
 Coveralls.wear!
+=======
+
+>>>>>>> origin/master
 ENV['RACK_ENV'] = 'test'
 
 include Rack::Test::Methods
@@ -48,19 +52,19 @@ describe "Testing Chat App" do
        @browser.find_element(:id,"lgout").click
     end
     
-    it "4. Should post a message" do
-       @browser.find_element(:id, "username").send_keys("Evelpia")
-       @browser.manage.timeouts.implicit_wait = 1
-       @browser.find_element(:id,"SignIn").click
-       @browser.get(@site2)
-       @browser.manage.timeouts.implicit_wait = 5
-       @browser.find_element(:id, "text").send_keys("Hello World!")
-       @browser.find_element(:id, "enviar").click
-       @browser.manage.timeouts.implicit_wait = 2
-       item = @browser.find_element(:id, "chat").text
-       assert_equal("Hello World!", item)
-       @browser.find_element(:id,"lgout").click
-    end
+#     it "4. Should post a message" do
+#        @browser.find_element(:id, "username").send_keys("Evelpia")
+#        @browser.manage.timeouts.implicit_wait = 1
+#        @browser.find_element(:id,"SignIn").click
+#        @browser.get(@site2)
+#        @browser.manage.timeouts.implicit_wait = 5
+#        @browser.find_element(:id, "text").send_keys("Hello World!")
+#        @browser.find_element(:id, "enviar").click
+#        @browser.manage.timeouts.implicit_wait = 2
+#        item = @browser.find_element(:id, "chat").text
+#        assert_equal("Hello World!", item)
+#        @browser.find_element(:id,"lgout").click
+#     end
     
     it "5. Should logout user" do
        @browser.find_element(:id, "username").send_keys("Evelpia")
@@ -73,6 +77,7 @@ describe "Testing Chat App" do
     end
  end
  
+<<<<<<< HEAD
  describe "Testing for coveralls" do
     
     it "Without session init" do
@@ -146,3 +151,6 @@ describe "Testing Chat App" do
 		expect(last_response).to be_ok
 	end
  end
+=======
+ 
+>>>>>>> origin/master
