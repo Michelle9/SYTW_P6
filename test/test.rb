@@ -10,7 +10,7 @@ ENV['RACK_ENV'] = 'test'
 
 include Rack::Test::Methods
 
-def app
+def chat
    Sinatra::Application
 end
 
