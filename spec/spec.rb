@@ -9,7 +9,7 @@ require 'rspec'
 include Rack::Test::Methods
 describe "Testing specs" do
 
-   def chat
+   def app
       Sinatra::Application
    end
     
