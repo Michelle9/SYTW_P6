@@ -1,4 +1,4 @@
-task :default => :test
+task :default => :tests
 
 desc "Run Server"
   task :rackup do
@@ -11,9 +11,9 @@ task :server do
 end  
   
   
-desc "Test" 
-  task :test do
-	sh "ruby spec/tests.rb"
+desc "Test (default)" 
+  task :tests => :spec do
+	sh "ruby test/test.rb"
   end
 
 desc "make a non Ajax request via curl"
@@ -33,10 +33,15 @@ end
 
 desc "Run tests in local machine"
 task :local_tests do
-   sh "gnome-terminal -x sh -c 'rackup' && sh -c 'ruby spec/tests.rb local'"
+   sh "gnome-terminal -x sh -c 'rackup' && sh -c 'ruby test/test.rb local'"
 end
 
 desc "Open repository"
 task :repo do
   sh "gnome-open https://github.com/Michelle9/SYTW_P6.git"
+end
+
+desc "run specs"
+task :spec do
+  sh "bundle exec rspec spec/spec.rb"
 end
