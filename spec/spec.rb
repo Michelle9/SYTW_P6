@@ -7,10 +7,9 @@ require 'rubygems'
 require 'rspec'
 
 include Rack::Test::Methods
-
 describe "Testing specs" do
 
-   def app
+   def chat
       Sinatra::Application
    end
     
