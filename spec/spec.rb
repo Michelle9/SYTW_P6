@@ -8,12 +8,11 @@ require 'rspec'
 
 include Rack::Test::Methods
 
-   def app
-	   Sinatra::Application
-   end
-   
-   
 describe "Testing specs" do
+
+   def app
+      Sinatra::Application
+   end
     
     it "Without session init" do
        get '/', {}, 'rack.session' => { :name => 'Testing' }
@@ -27,7 +26,7 @@ describe "Testing specs" do
     
     it "Testing post" do
        post '/'
-       expect(last_response.to be_ok
+       expect(last_response).to be_ok
     end
     
     it "post with user" do
