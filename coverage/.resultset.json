@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/jhoa/Documentos/SYTW_GITHUB/SYTW_P6/chat.rb": [
+      "C:/Users/user/Desktop/Trabajo Local/SYTW/ChatjQ/SYTW_P6/chat.rb": [
         1,
         1,
         null,
@@ -100,10 +100,6 @@
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1416503096
-=======
-    "timestamp": 1416501972
->>>>>>> 8ee8b4819f2da154865dcd10654e7a140cf1fa08
+    "timestamp": 1416509216
   }
 }
