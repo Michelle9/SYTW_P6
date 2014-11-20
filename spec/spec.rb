@@ -73,14 +73,4 @@ describe "Testing specs" do
 		get '/user',{}, {"HTTP_X_REQUESTED_WITH" => "XMLHttpRequest"}
 		expect(last_response).to be_ok
 	end
-	
-	#it "chat update" do
-	#	get '/chat/update'
-	#	expect(last_response.body).to eq("Not an ajax request")
-	#end
-
-	#it "chat update with HTTP_X_REQUESTED_WITH" do
-	#	get '/chat/update',{}, {"HTTP_X_REQUESTED_WITH" => "XMLHttpRequest"}
-	#	expect(last_response).to be_ok
-	#end
  end
