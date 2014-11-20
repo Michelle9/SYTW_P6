@@ -32,6 +32,7 @@ Estos enlaces pueden ser de ayuda:
 
 ### Heroku: [ACCEDER](https://desolate-shelf-1169.herokuapp.com/)
 ### Coveralls:
+[![Coverage Status](https://img.shields.io/coveralls/Michelle9/SYTW_P6.svg)](https://coveralls.io/r/Michelle9/SYTW_P6)
 
 ### Travis: 
 [![Build Status](https://travis-ci.org/Michelle9/SYTW_P6.svg?branch=master)](https://travis-ci.org/Michelle9/SYTW_P6)
